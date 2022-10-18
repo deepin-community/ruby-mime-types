@@ -1,0 +1,28 @@
+Source: ruby-mime-types
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Lucas Nussbaum <lucas@debian.org>,
+           Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb (>= 1),
+               rake,
+               ruby-mime-types-data (>= 3.2015)
+Standards-Version: 4.4.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-mime-types.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-mime-types
+Homepage: https://github.com/mime-types/ruby-mime-types/
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-mime-types
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: guess MIME type of files
+ This library allows for the identification of a file's likely MIME
+ content type. The identification of MIME content type is based on a
+ file's filename extensions.

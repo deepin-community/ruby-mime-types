@@ -1,0 +1,131 @@
+ruby-mime-types (3.3.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Antonio Terceiro ]
+  * New upstream version 3.3.1
+  * Packaging updates from a new run of dh-make-ruby
+    - bump debhelper compat to 12 and delete debian/compat
+    - bump Standards-Version to 4.4.0; no other changes needed
+    - Set Testsuite: to autopkgtest-pkg-ruby to let autodep8 autogenerate the
+      gem2deb-test-runner call (Closes: #950227)
+    - add Rules-Requires-Root: no
+    - replace explicit dependencies with ${ruby:Depends} (thus build-depend on
+      gem2deb >= 1)
+    - add debian/upstream/metadata
+    - debian/watch: bump to version=4
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 03 Feb 2020 13:12:11 +0100
+
+ruby-mime-types (3.2.2-1) unstable; urgency=medium
+
+  * New upstream version 3.2.2
+  * Move debian/watch to gemwatch.debian.net
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Bump debhelper compatibility level to 11
+  * History file is now markdown
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 17 Aug 2018 14:25:58 +0200
+
+ruby-mime-types (3.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Use --gem-install and drop patches
+  * Add ruby-mime-types-data as dependency
+  * Bump standards version to 4.0.0
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 30 Jul 2017 19:00:29 +0530
+
+ruby-mime-types (2.6.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Update packaging with a new dh-make-ruby run
+    - not running the tests for now
+  * Install data files to /usr/share/ruby-mime-types/
+    - add 0001-Read-data-files-from-usr-share-ruby-mime-types.patch to make
+      the code look for them there
+    - add a DEP-8 smoke test for that
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 13 Jun 2015 12:29:46 -0300
+
+ruby-mime-types (1.25-1) unstable; urgency=low
+
+  * Imported Upstream version 1.25
+  * debian/patches: drop ignore-refutation.diff, not needed anymore
+  * debian/control: built against ruby-minitest >= 0.5
+  * debian/ruby-test-files.yaml: add minitest to the required files
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 14 Sep 2013 16:13:18 +0200
+
+ruby-mime-types (1.23-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control:
+    + update my email address
+    + remove obsolete DM-Upload-Allowed flag
+    + use canonical URI in Vcs-* fields
+    + drop transitional packages
+    + depend on ruby instead of ruby1.8
+    + Bump Standards-Version to 3.9.4 (no changes needed)
+  * debian/rules: install upstream changelog
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 14 May 2013 16:08:59 +0200
+
+ruby-mime-types (1.19-1) unstable; urgency=low
+
+  * New upstream version
+  * Bump Standars-Version to 3.9.3 (no changes needed)
+  * Add myself to Uploaders:
+  * Build-depend on gem2deb >=0.3.0
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Tue, 26 Jun 2012 10:07:11 +0200
+
+ruby-mime-types (1.17.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch my email to @debian.org.
+  * Fix priority for transitional package.
+  * Add ignore-refutation.diff: work-around test failure.
+  * README.txt was renamed to README.rdoc.
+  * Bump standards-version to 3.9.2. No changes needed.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Tue, 20 Dec 2011 19:25:27 +0100
+
+ruby-mime-types (1.16-3) unstable; urgency=low
+
+  * Switch to gem2deb-based packaging. Rename source and binary packages.
+  * Support Ruby 1.9.1. Closes: #611824.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Tue, 26 Apr 2011 12:59:05 +0200
+
+libmime-types-ruby (1.16-2) unstable; urgency=low
+
+  * Fix installation path (Closes: #563932)
+
+ -- Decklin Foster <decklin@red-bean.com>  Wed, 06 Jan 2010 09:16:39 -0500
+
+libmime-types-ruby (1.16-1) unstable; urgency=low
+
+  * New upstream version (Closes: #563598)
+  * Install upstream changelog as changelog
+
+ -- Decklin Foster <decklin@red-bean.com>  Tue, 05 Jan 2010 09:20:24 -0500
+
+libmime-types-ruby (1.15-2) unstable; urgency=low
+
+  * Correctly install into ruby $libdir (Closes: #513824)
+
+ -- Decklin Foster <decklin@red-bean.com>  Sun, 01 Feb 2009 10:39:37 -0500
+
+libmime-types-ruby (1.15-1) unstable; urgency=low
+
+  * Initial release (Closes: #488873)
+
+ -- Decklin Foster <decklin@red-bean.com>  Thu, 26 Jun 2008 16:48:06 -0400
+
